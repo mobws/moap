@@ -1,27 +1,32 @@
 package com.mobws.service.controller;
 
 import com.mobws.service.bean.User;
+import com.mobws.service.dao.UserMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Auther: liujn
  * @Date: 2018/8/17 13:12
- * @Description: 测试用例
+ * @Description: 用户 Controller
  */
 @RestController
-public class HelloWorldController {
+public class UserController {
+
+    @Resource
+    UserMapper um;
 
     @RequestMapping(value = "/getuser", method = RequestMethod.GET)
-    public User getUser(){
+    public List<User> getAllUser(){
 
-        User user = new User();
-        user.setPk_user("P11111");
-        user.setUser_code("100101");
-        user.setUser_name("测试用户");
+        ArrayList<User> userArrayList = um.listUser();
 
-        return user;
+        return userArrayList;
     }
 
 

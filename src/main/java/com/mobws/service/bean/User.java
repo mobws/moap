@@ -1,5 +1,7 @@
 package com.mobws.service.bean;
 
+import java.util.Date;
+
 /**
  * @Auther: liujn
  * @Date: 2018/8/17 14:46
@@ -7,16 +9,25 @@ package com.mobws.service.bean;
  */
 public class User {
 
-    private String pk_user;
-    private String user_name;
+    private String cuserid;
     private String user_code;
+    private String user_name;
+    private Date ts;
 
-    public String getPk_user() {
-        return pk_user;
+    public String getCuserid() {
+        return cuserid;
     }
 
-    public void setPk_user(String pK_user) {
-        this.pk_user = pK_user;
+    public void setCuserid(String cuserid) {
+        this.cuserid = cuserid;
+    }
+
+    public String getUser_code() {
+        return user_code;
+    }
+
+    public void setUser_code(String user_code) {
+        this.user_code = user_code;
     }
 
     public String getUser_name() {
@@ -27,11 +38,11 @@ public class User {
         this.user_name = user_name;
     }
 
-    public String getUser_code() {
-        return user_code;
+    public Date getTs() {
+        return ts;
     }
 
-    public void setUser_code(String user_code) {
-        this.user_code = user_code;
+    public void setTs(Date ts) {
+        this.ts = ts;
     }
 }

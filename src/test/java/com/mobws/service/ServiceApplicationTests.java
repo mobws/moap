@@ -1,6 +1,6 @@
 package com.mobws.service;
 
-import com.mobws.service.controller.HelloWorldController;
+import com.mobws.service.controller.UserController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +21,7 @@ public class ServiceApplicationTests {
 
     @Before
     public void setUp() {
-        mockMvc = MockMvcBuilders.standaloneSetup(new HelloWorldController()).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(new UserController()).build();
     }
 
     @Test
